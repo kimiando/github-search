@@ -57,11 +57,12 @@ display: flex;
 justify-content: space-between;
 list-style-type: none;
 max-width: 400px;
-margin-left: -41px;
+margin-left: -45px;
 }
 .user-info ul li{
 display: flex;
 align-items: center;
+margin: 5px;
 }
 
 .user-info ul li strong{
