@@ -37,8 +37,8 @@ function createUserCard(user) {
   <div>
     <div class="user-info">
       <h2>${user.name}</h2>
-      <p>${user.bio}</p>
-      <p>${user.location}</p>
+      <p class="location"><em>${user.location}</em></p>
+      <p>${user.bio !== null ? `<p>${user.bio}</p>` : '<p>No bio available</p>'}</p>
       <ul>
         <li>${user.followers}<strong>Followers</strong></li>
         <li>${user.following} <strong>Following</strong></li>

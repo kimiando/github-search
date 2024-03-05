@@ -20,7 +20,7 @@ max-width: 700px;
 .user-form input{
   width: 100%;
   display: block;
-  background-color: gray;
+  background-color: #adadad82;
   border:none;
   border-radius: 10px;
   color: white;
@@ -29,13 +29,16 @@ max-width: 700px;
   font-size: 16px;
 }
 
+.user-form input::placeholder{
+  color: #adadadaf;
+}
 .card{
   max-width: 800px;
-  background-color: gray;
+  background-color: #adadad82;
   border-radius: 20px;
   display: flex;
-  margin: 0 20px;
   padding: 32px;
+  box-shadow: 0 0 10px #adadad
 }
 
 .card img{
@@ -43,6 +46,7 @@ max-width: 700px;
   width: 150px;
   border-radius: 50%;
   border: 10px solid purple;
+  margin-top: 20%;
 }
 
 .user-info{
@@ -50,19 +54,27 @@ max-width: 700px;
   margin-left: 32px;
 }
 .user-info h2{
-margin-top: 0ex;
+  margin-top: 0.5em;
+  color: #5f015f;
+}
+.user-info p{
+  color: purple;
+}
+.location{
+  margin-top: -15px;
 }
 .user-info ul{
-display: flex;
-justify-content: space-between;
-list-style-type: none;
-max-width: 400px;
-margin-left: -45px;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  max-width: 400px;
+  margin-left: -45px;
+  color: #5f015f;
 }
 .user-info ul li{
-display: flex;
-align-items: center;
-margin: 5px;
+  display: flex;
+  align-items: center;
+  margin: 5px;
 }
 
 .user-info ul li strong{
