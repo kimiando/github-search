@@ -87,10 +87,11 @@ max-width: 700px;
   text-decoration: none;
   color: white;
   background-color: purple;
-  padding: 3px;
-  font-size: 12px;
+  padding: 10px;
+  font-size: 11px;
   margin-right: 5px;
   margin-bottom: 10px;
+  border-radius: 20px;
 }
 
 #repos{
