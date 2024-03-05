@@ -6,9 +6,15 @@ const cardHTML = document.getElementById('main')
 // getUser('kimiando')
 
 async function getUser(username) {
-const { data } = await axios(APIURL + username)
+  try {
+    const { data } = await axios(APIURL + username)
 
-createUserCard(data)
+    createUserCard(data)
+    } catch(err) {
+      if(err.response.status == 404){
+        createErrorCard('no user found')
+      }
+    }
 }
 
 function createUserCard(user) {
@@ -27,14 +33,20 @@ function createUserCard(user) {
         <li>${user.following} <strong>Following</strong></li>
         <li>${user.public_repos} <strong>Repos</strong></li>
       </ul>
-      <div id="repos">
-        <a href="#" class="repo"> Repo 1</a>
-        <a href="#" class="repo"> Repo 2</a>
-        <a href="#" class="repo"> Repo 3</a>
-      </div>
+      <div id="repos"></div>
     </div>
   </div>
 </div>`
+  main.innerHTML = cardHTML
+}
+
+
+function createErrorCard(message) {
+  const cardHTML = `
+  <div class="card">
+  <h1>${message}</h1>
+  </div>
+  `
   main.innerHTML = cardHTML
 }
 form.addEventListener('submit', (e) =>{
