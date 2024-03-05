@@ -75,12 +75,17 @@ margin: 5px;
   text-decoration: none;
   color: white;
   background-color: purple;
-  padding: 10px ;
+  padding: 3px;
   font-size: 12px;
-  margin-right: 10px;
+  margin-right: 5px;
   margin-bottom: 10px;
 }
 
+#repos{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 @media (max-width: 500px) {
   .card{
     flex-direction: column;
@@ -88,5 +93,11 @@ margin: 5px;
   }
   .user-form{
     max-width: 400px;
+  }
+  #repos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 }
